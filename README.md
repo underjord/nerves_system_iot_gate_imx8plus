@@ -1,13 +1,12 @@
 # Compulab IOT-GATE-IMX8PLUS
 
+[![REUSE status](https://api.reuse.software/badge/github.com/underjord/nerves_system_iot_gate_imx8plus)](https://api.reuse.software/info/github.com/underjord/nerves_system_iot_gate_imx8plus)
+
 This is the base Nerves System configuration for the
 [Compulab IOT-GATE-IMX8PLUS](https://www.compulab.com/products/iot-gateways/iot-gate-imx8plus-industrial-arm-iot-gateway).
 
 It was forked from the implementation by Redwire Labs. And this repo was started to attempt to maintain it after they ceased
 operating.
-
-![IOT-GATE](assets/images/iot-gate.jpg)
-<br><sup>[Image credit](#compulab)</sup>
 
 | Feature        | Description                                                 |
 | -------------- | ----------------------------------------------------------- |
@@ -24,9 +23,6 @@ operating.
 | Bluetooth      | Yes                                                         |
 | RTC            | Yes                                                         |
 | HW Watchdog    | Yes                                                         |
-
-[Image credit](#compulab): This image is from
-[compulab.com](https://www.compulab.com/products/iot-gateways/iot-gate-imx8plus-industrial-arm-iot-gateway).
 
 ## Getting started
 

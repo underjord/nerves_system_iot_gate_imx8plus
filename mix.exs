@@ -82,7 +82,6 @@ defmodule NervesSystemIotGateIMX8Plus.MixProject do
     [
       extras: ["README.md", "CHANGELOG.md"],
       main: "readme",
-      assets: %{"assets" => "assets"},
       source_ref: "v#{@version}",
       source_url: @source_url,
       skip_undefined_reference_warnings_on: ["CHANGELOG.md"]
@@ -92,8 +91,12 @@ defmodule NervesSystemIotGateIMX8Plus.MixProject do
   defp package do
     [
       files: package_files(),
-      licenses: ["Apache-2.0"],
-      links: %{"GitHub" => @source_url}
+      licenses: ["Apache-2.0", "GPL-2.0-only", "GPL-2.0-or-later"],
+      links: %{
+        "GitHub" => @source_url,
+        "REUSE Compliance" =>
+          "https://api.reuse.software/info/github.com/#{@github_organization}/#{@app}"
+      }
     ]
   end
 
@@ -101,9 +104,10 @@ defmodule NervesSystemIotGateIMX8Plus.MixProject do
     [
       "CHANGELOG.md",
       "LICENSE",
+      "LICENSES/*",
       "README.md",
+      "REUSE.toml",
       "VERSION",
-      "assets/images",
       "fwup-ops.conf",
       "fwup.conf",
       "fwup_include",
