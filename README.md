@@ -3,6 +3,9 @@
 This is the base Nerves System configuration for the
 [Compulab IOT-GATE-IMX8PLUS](https://www.compulab.com/products/iot-gateways/iot-gate-imx8plus-industrial-arm-iot-gateway).
 
+It was forked from the implementation by Redwire Labs. And this repo was started to attempt to maintain it after they ceased
+operating.
+
 ![IOT-GATE](assets/images/iot-gate.jpg)
 <br><sup>[Image credit](#compulab)</sup>
 
