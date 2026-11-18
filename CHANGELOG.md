@@ -1,5 +1,18 @@
 # Changelog
 
+## v0.7.0
+
+- Updated to nerves_system_br 1.35.3 / OTP 29
+- Updated the toolchain to GCC 15.3.0
+- CI publishes `-wip-` tag builds as prereleases
+
+- Dependencies
+  - [nerves_system_br 1.35.3](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.35.3)
+  - [Buildroot 2026.08.1](https://lore.kernel.org/buildroot/buildroot-2026.08.1-announce-1792682049@buildroot.org/T/)
+  - [Erlang/OTP 29.1.2](https://erlang.org/download/OTP-29.1.2.README.md)
+  - [fwup 1.17.0](https://github.com/fwup-home/fwup/releases/tag/v1.17.0)
+  - [nerves_toolchain_aarch64_nerves_linux_gnu 15.3.1](https://github.com/nerves-project/toolchains/releases/tag/v15.3.0)
+
 ## v0.6.0
 
 - Updated to nerves_system_br 1.33.0 / OTP 28
