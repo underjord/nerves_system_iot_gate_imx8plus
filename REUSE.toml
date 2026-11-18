@@ -83,6 +83,17 @@ precedence = "aggregate"
 SPDX-FileCopyrightText = "2024 Redwire Labs LLC"
 SPDX-License-Identifier = "Apache-2.0"
 
+[[annotations]]
+path = [
+ "package/sharutils/sharutils.mk"
+]
+precedence = "aggregate"
+SPDX-FileCopyrightText = [
+ "2024 Redwire Labs LLC",
+ "2026 Underjord AB"
+]
+SPDX-License-Identifier = "Apache-2.0"
+
 # Patch to GNU sharutils
 [[annotations]]
 path = [

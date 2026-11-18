@@ -15,7 +15,7 @@ jobs:
     outputs:
       artifact_filename: ${{ steps.nerves.outputs.artifact_filename }}
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Build
         id: nerves
         uses: redwirelabs/build-nerves-system-action@v1
@@ -24,7 +24,7 @@ jobs:
     needs: build
     if: github.ref_type == 'tag'
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - name: Fetch artifact
         uses: actions/download-artifact@v4
         with:

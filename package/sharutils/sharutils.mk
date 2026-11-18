@@ -19,7 +19,7 @@ endef
 SHARUTILS_DEPENDENCIES = host-pkgconf
 
 HOST_SHARUTILS_CONF_ENV += \
-	CFLAGS="-fcommon -Wno-format-security"
+	CFLAGS="-std=gnu17 -fcommon -Wno-format-security"
 
 HOST_SHARUTILS_CONF_OPTS = \
 	--enable-nls
