@@ -19,7 +19,7 @@ jobs:
       - name: Build
         id: nerves
         uses: redwirelabs/build-nerves-system-action@v1
-  draft-release:
+  release:
     runs-on: ubuntu-24.04
     needs: build
     if: github.ref_type == 'tag'
@@ -29,13 +29,22 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: ${{ needs.build.outputs.artifact_filename }}
-      - name: Create draft release
+      - name: Create release
         env:
           GH_TOKEN: ${{ github.token }}
+          TAG: ${{ github.ref_name }}
+          ARTIFACT: ${{ needs.build.outputs.artifact_filename }}
         run: |
+          # Work-in-progress builds (v*-wip-*) are published as prereleases so
+          # they can be pulled into a firmware project for testing. Real
+          # release tags still get a draft for manual review.
+          case "$TAG" in
+            *-wip-*) release_type="--prerelease" ;;
+            *) release_type="--draft" ;;
+          esac
           gh release \
             create \
-              ${{ github.ref_name }} \
-              ${{ needs.build.outputs.artifact_filename }} \
-            --title ${{ github.ref_name }} \
-            --draft
+              "$TAG" \
+              "$ARTIFACT" \
+            --title "$TAG" \
+            $release_type
